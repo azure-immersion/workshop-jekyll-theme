@@ -1,0 +1,11 @@
+{% include header.html %}
+<main class="container-fluid">
+    <section class="row">
+        <nav class="col-sm-2 px-0 border-right shadow">
+            {% include navigation.html %}
+        </nav>
+        <article class="bg-transparent col-sm-10 p-5">
+            {{ content }}
+        </article>
+    </section>
+</main>
