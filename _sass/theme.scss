@@ -30,14 +30,13 @@ code {
     padding: 0 7px;
 }
 
-code.hljs {
-    background-color: transparent !important;
+div.highlighter-rouge.hljs {
+    margin: 16px 0 0;
 }
 
 pre {
     overflow: auto;
     padding: 16px;
-    margin: 16px 0 0;
     direction: ltr;
     white-space: pre;
     word-spacing: normal;
