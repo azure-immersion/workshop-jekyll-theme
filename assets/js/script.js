@@ -64,7 +64,7 @@ $(function () {
                 'Copy'
             )
         );
-        header.insertBefore($(this));
+        header.prepend($(this));
         $(this).addClass('mt-0');
     });
     new ClipboardJS('.btn-code');
