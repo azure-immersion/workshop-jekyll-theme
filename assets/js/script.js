@@ -30,9 +30,9 @@ $(function () {
     $('[data-spy="scroll"]').each(function () {
         var $spy = $(this).scrollspy('refresh')
     });
-    $('pre').each(function (index) {
+    $('div.highlighter-rouge').each(function (index) {
         var generatedId = 'codeBlock' + index;
-        var languageClass = $(this).children('code:first').attr('class').split(' ')[0];
+        var languageClass = $(this).attr('class').split(' ')[0];
         var language = 
             languageClass == 'language-sh' ? 'Shell' :
             languageClass == 'language-js' ? 'JavaScript' :
