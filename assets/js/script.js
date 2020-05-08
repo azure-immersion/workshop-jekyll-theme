@@ -33,11 +33,15 @@ $(function () {
     $('pre').each(function (index) {
         var generatedId = 'codeBlock' + index;
         var languageClass = $(this).children('code:first').attr('class').split(' ')[0];
-        var language = languageClass == 'language-sh' ? 'shell' :
-            languageClass == 'language-js' ? 'javascript' :
-                languageClass == 'language-xml' ? 'xml' :
-                    languageClass == 'language-sql' ? 'sql' :
-                        languageClass == 'language-csharp' ? 'c#' : 'code';
+        var language = 
+            languageClass == 'sh' ? 'Shell' :
+            languageClass == 'js' ? 'JavaScript' :
+            languageClass == 'json' ? 'JSON' :
+            languageClass == 'xml' ? 'XML' :
+            languageClass == 'sql' ? 'SQL' :
+            languageClass == 'cs' ? 'C#' : 
+            languageClass == 'powershell' ? 'PowerShell' : 
+            'code';
         $(this).attr('id', generatedId);
         var header = $('<div/>', {
             class: 'code-header mt-3 mb-0 bg-light d-flex justify-content-between border',
