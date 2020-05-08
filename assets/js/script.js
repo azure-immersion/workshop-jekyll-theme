@@ -42,7 +42,7 @@ $(function () {
             languageClass == 'language-csharp' ? 'C#' : 
             languageClass == 'language-powershell' ? 'PowerShell' : 
             'Code';
-        $(this).attr('id', generatedId);
+        $(this).find('div.highlight').attr('id', generatedId);
         var header = $('<div/>', {
             class: 'code-header mt-3 mb-0 bg-light d-flex justify-content-between border',
         }).append(
