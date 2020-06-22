@@ -17,5 +17,16 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>  
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
         <script src="{{ "/assets/js/script.js?v=" | append: site.github.build_revision | relative_url }}"></script>
+        <script>
+            $(function() {
+              var index = 0;
+              $('blockquote').each(function() {
+                $(this).attr('class', 'alert alert-primary bg-azure text-white');
+                $(this).find('p:first').attr('data-toggle', 'collapse').attr('data-target', '#collapse-' + index);
+                $(this).find('p:last').attr('class', 'collapse').attr('id', 'collapse-' + index);
+                ++index;
+              });
+            });
+        </script>
     </body>
 </html>
