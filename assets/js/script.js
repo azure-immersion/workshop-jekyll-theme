@@ -1,8 +1,4 @@
 $(function () {
-    $('article img').each(function () {
-        var src = $(this).attr('src');
-        $(this).wrap('<a href="' + src + '" target="_blank"></a>');
-    });
     $('article > :header').each(function () {
         if ($(this).prop('tagName') == 'H1') {
             $('nav.toc > ul').append(
